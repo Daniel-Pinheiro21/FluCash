@@ -1,0 +1,25 @@
+name: FluCash CI
+
+on:
+  push:
+    branches: [ "main", "master" ]
+  pull_request:
+    branches: [ "main", "master" ]
+
+jobs:
+  build:
+    runs-on: ubuntu-latest
+
+    steps:
+      - name: Fazer o Checkout do código
+        uses: actions/checkout@v4
+
+      - name: Configurar o Java (JDK 17)
+        uses: actions/setup-java@v4
+        with:
+          java-version: '17'
+          distribution: 'temurin'
+          cache: maven
+
+      - name: Compilar, Rodar Lint (Checkstyle) e Testes (JUnit)
+        run: mvn clean verify
