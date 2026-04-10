@@ -1,4 +1,4 @@
-package com.flucash;
+package com.FluCash;
 
 public enum Categoria {
     ALIMENTACAO,

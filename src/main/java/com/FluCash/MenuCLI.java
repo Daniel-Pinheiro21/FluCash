@@ -1,4 +1,4 @@
-package com.flucash;
+package com.FluCash;
 
 import java.util.Scanner;
 
@@ -60,7 +60,7 @@ public class MenuCLI {
             System.out.print("Valor (ex: 50.50): ");
             double valor = Double.parseDouble(scanner.nextLine());
 
-            System.out.println("Escolha a categoria (1-ALIMENTACAO, 2-TRANSPORTE, 3-MORADIA, 4-LAZER, 5-SAUDE, 6-OUTROS): ");
+            System.out.println("Categoria (1-ALIMENTACAO, 2-TRANSPORTE, 3-MORADIA, 4-LAZER, 5-SAUDE, 6-OUTROS): ");
             int catOpcao = Integer.parseInt(scanner.nextLine());
             Categoria categoriaSelecionada = Categoria.values()[catOpcao - 1];
 

@@ -1,4 +1,4 @@
-package com.flucash;
+package com.FluCash;
 
 public class Gasto {
     private String descricao;
@@ -7,7 +7,7 @@ public class Gasto {
 
     public Gasto(String descricao, double valor, Categoria categoria) {
         if (valor < 0) {
-            throw new IllegalArgumentException("O valor do gasto não pode ser negativo.");
+            throw new IllegalArgumentException("O valor não pode ser negativo.");
         }
         if (descricao == null || descricao.trim().isEmpty()) {
             throw new IllegalArgumentException("A descrição não pode ser vazia.");
