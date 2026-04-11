@@ -45,14 +45,17 @@ Abra o seu terminal e siga os passos abaixo para clonar e compilar o repositóri
 git clone [https://github.com/Daniel-Pinheiro21/FluCash.git](https://github.com/Daniel-Pinheiro21/FluCash.git)
 cd FluCash
 mvn clean package
-7. Instruções de Execução
+### 7. Instruções de Execução
+
 Após compilar o projeto, inicie o FluCash digitando o comando abaixo no terminal:
 
-Bash
+```bash
 java -jar target/flucash-1.0.0-jar-with-dependencies.jar
-Exemplo de Uso (CLI):
+```
 
-Plaintext
+**Exemplo de Uso (CLI):**
+
+```text
 ╔════════════════════════════════════╗
 ║           FLUCASH v1.0.0           ║
 ║   Gerenciador de Gastos Pessoais   ║
@@ -71,19 +74,31 @@ Descrição do gasto: Supermercado
 Valor (ex: 50.50): 150.00
 Categoria (1-ALIMENTACAO, 2-TRANSPORTE, 3-MORADIA...): 1
 ✔ Gasto adicionado com sucesso!
-8. Instruções para Testes e Linting
+```
+
+---
+
+### 8. Instruções para Testes e Linting
+
 O projeto possui testes automatizados e análise estática para garantir a integridade e qualidade do código.
 
-Para rodar os testes automatizados (JUnit 5):
+**Para rodar os testes automatizados (JUnit 5):**
 
-Bash
+```bash
 mvn test
-Para rodar o Lint / Análise Estática (Checkstyle):
+```
 
-Bash
+**Para rodar o Lint / Análise Estática (Checkstyle):**
+
+```bash
 mvn checkstyle:check
-9. Estrutura do Projeto
-Plaintext
+```
+
+---
+
+### 9. Estrutura do Projeto
+
+```text
 FluCash/
 ├── src/
 │   ├── main/java/com/FluCash/
@@ -99,11 +114,13 @@ FluCash/
 ├── checkstyle.xml
 ├── pom.xml
 └── README.md
-10. Informações do Projeto
-Versão Atual: 1.0.0 (Versionamento Semântico)
+```
 
-Autor: Daniel Pinheiro Antunes Nogueira
+---
 
-Instituição: Centro Universitário de Brasília (CEUB) - FATECS
+### 10. Informações do Projeto
 
-Link do Repositório Público: https://github.com/Daniel-Pinheiro21/FluCash
+* **Versão Atual:** `1.0.0` (Versionamento Semântico)
+* **Autor:** Daniel Pinheiro Antunes Nogueira
+* **Instituição:** Centro Universitário de Brasília (CEUB) - FATECS
+* **Link do Repositório Público:** [https://github.com/Daniel-Pinheiro21/FluCash](https://github.com/Daniel-Pinheiro21/FluCash)
