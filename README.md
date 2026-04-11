@@ -60,7 +60,7 @@ A escolha por uma interface de terminal (CLI) garante leveza, rapidez e foco tot
 **Passos**
 
 ```bash
-git clone [https://github.com/Daniel-Pinheiro21/FluCash.git](https://github.com/Daniel-Pinheiro21/FluCash.git)
+git clone https://github.com/Daniel-Pinheiro21/FluCash.git
 cd FluCash
 mvn package -DskipTests
 java -jar target/flucash-1.0.0-jar-with-dependencies.jar
