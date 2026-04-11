@@ -32,28 +32,37 @@ O **FluCash** atua como um assistente financeiro local e direto ao ponto. Sem a 
 
 ---
 
-### 6. Instruções de Instalação
+### 6. Instalação e Execução
 
-**Pré-requisitos:**
-* Ter o [Java JDK 17](https://aws.amazon.com/pt/corretto/) (ou superior) instalado.
-* Ter o [Apache Maven](https://maven.apache.org/) instalado.
-* Ter o Git instalado.
+**Pré-requisitos**
 
-Abra o seu terminal e siga os passos abaixo para clonar e compilar o repositório:
+* Java 17 (ou superior)
+* Maven instalado
+
+**Passos**
 
 ```bash
 git clone [https://github.com/Daniel-Pinheiro21/FluCash.git](https://github.com/Daniel-Pinheiro21/FluCash.git)
 cd FluCash
-mvn clean package
-### 7. Instruções de Execução
-
-Após compilar o projeto, inicie o FluCash digitando o comando abaixo no terminal:
-
-```bash
+mvn package -DskipTests
 java -jar target/flucash-1.0.0-jar-with-dependencies.jar
 ```
 
-**Exemplo de Uso (CLI):**
+### 7. Testes e Lint
+
+**Rodar testes (JUnit)**
+
+```bash
+mvn test
+```
+
+**Rodar análise estática (Checkstyle)**
+
+```bash
+mvn checkstyle:check
+```
+
+### 8. Exemplo de Uso
 
 ```text
 ╔════════════════════════════════════╗
@@ -76,27 +85,7 @@ Categoria (1-ALIMENTACAO, 2-TRANSPORTE, 3-MORADIA...): 1
 ✔ Gasto adicionado com sucesso!
 ```
 
----
-
-### 8. Instruções para Testes e Linting
-
-O projeto possui testes automatizados e análise estática para garantir a integridade e qualidade do código.
-
-**Para rodar os testes automatizados (JUnit 5):**
-
-```bash
-mvn test
-```
-
-**Para rodar o Lint / Análise Estática (Checkstyle):**
-
-```bash
-mvn checkstyle:check
-```
-
----
-
-### 9. Estrutura do Projeto
+### 9. Estrutura do Projeto (v1.0.0)
 
 ```text
 FluCash/
@@ -115,8 +104,6 @@ FluCash/
 ├── pom.xml
 └── README.md
 ```
-
----
 
 ### 10. Informações do Projeto
 
