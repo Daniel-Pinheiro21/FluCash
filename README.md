@@ -2,6 +2,8 @@
 
 [![FluCash CI](https://github.com/Daniel-Pinheiro21/FluCash/actions/workflows/ci.yml/badge.svg)](https://github.com/Daniel-Pinheiro21/FluCash/actions/workflows/ci.yml)
 
+O FluCash é um gerenciador financeiro inteligente via linha de comando (CLI), desenvolvido em Java. para o gerenciamento inteligente de finanças pessoais, focada em combater o descontrole financeiro gerado pelos pequenos gastos do dia a dia através de registros rápidos e resumos categorizados.
+
 ---
 
 ## Descrição do Problema
