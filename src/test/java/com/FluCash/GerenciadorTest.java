@@ -1,6 +1,6 @@
 package com.FluCash;
 
-// Importes explícitos para garantir que o IntelliJ ache o caminho
+
 import org.junit.jupiter.api.BeforeEach;
 import org.junit.jupiter.api.Test;
 
@@ -13,8 +13,6 @@ class GerenciadorTest {
 
     @BeforeEach
     void setUp() {
-        // Se a palavra Gerenciador continuar vermelha aqui,
-        // verifique se o arquivo Gerenciador.java está na pasta src/main/java/com/FluCash
         this.meuGerenciador = new Gerenciador();
     }
 
