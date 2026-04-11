@@ -1,103 +1,63 @@
 # FluCash — Gerenciador de Gastos Pessoais
 
-[![FluCash CI](https://github.com/Daniel-Pinheiro21/FluCash/actions/workflows/ci.yml/badge.svg)](https://github.com/Daniel-Pinheiro21/FluCash/actions/workflows/ci.yml)
+![FluCash CI](https://github.com/Daniel-Pinheiro21/FluCash/actions/workflows/ci.yml/badge.svg)
 
-O FluCash é um gerenciador financeiro inteligente via linha de comando (CLI), desenvolvido em Java. para o gerenciamento inteligente de finanças pessoais, focada em combater o descontrole financeiro gerado pelos pequenos gastos do dia a dia através de registros rápidos e resumos categorizados.
-
----
-
-## Descrição do Problema
-
-Muitas pessoas — especialmente jovens adultos e estudantes — perdem o controle das finanças por falta de um registro simples e rápido dos gastos do dia a dia. Pequenas despesas esquecidas se acumulam e geram ansiedade financeira, endividamento e incapacidade de poupar.
-
-## Proposta da Solução
-
-O **FluCash** é uma aplicação de linha de comando (CLI) leve e objetiva que permite registrar despesas, categorizá-las e visualizar resumos financeiros. Sem burocracia, sem cadastro, sem internet — basta executar e começar a controlar.
-
-## Público-Alvo
-
-Estudantes, jovens adultos e qualquer pessoa que queira ter um controle básico e rápido de seus gastos pessoais sem depender de aplicativos complexos.
+Aplicação CLI em Java desenvolvida para o gerenciamento inteligente de finanças pessoais, focada em combater o descontrole financeiro gerado pelos pequenos gastos do dia a dia através de registros rápidos e resumos categorizados.
 
 ---
 
-## Funcionalidades Principais
+### 1. Descrição do Problema Real
+Muitas pessoas perdem o controle das finanças por falta de um registro simples e rápido dos gastos diários. Pequenas despesas "invisíveis" (como lanches, transporte por aplicativo e assinaturas) se acumulam no fim do mês, gerando ansiedade financeira, endividamento e incapacidade de poupar e planejar o futuro. O atrito de abrir planilhas complexas faz com que muitos abandonem o hábito de anotar gastos.
 
-- Cadastro de gastos com descrição, valor e categoria
-- Validação automática: rejeita valores negativos ou dados inválidos
-- Listagem de todos os gastos registrados
-- Cálculo do total geral acumulado
-- Resumo financeiro agrupado por categoria (Alimentação, Transporte, Moradia, Lazer, Saúde, Outros)
+### 2. Proposta da Solução
+O **FluCash** atua como um assistente financeiro local e direto ao ponto. Sem a burocracia de telas complexas ou necessidade de internet, a aplicação de linha de comando (CLI) permite que o usuário registre despesas em segundos, categorize-as e visualize imediatamente resumos financeiros que mostram com exatidão para onde o dinheiro está indo.
 
----
+### 3. Público-Alvo
+* Jovens adultos e estudantes universitários que desejam iniciar o controle de suas finanças.
+* Pessoas que buscam um sistema minimalista, rápido e livre de distrações para anotar despesas diárias.
 
-## Tecnologias Utilizadas
+### 4. Funcionalidades Principais
+* **Registro de Gastos:** Inserção rápida de despesas com validação de dados (bloqueia valores negativos ou descrições vazias).
+* **Categorização Inteligente:** Classificação dos gastos em categorias pré-definidas (Alimentação, Transporte, Moradia, Lazer, Saúde e Outros).
+* **Listagem Total:** Visualização do histórico completo de gastos registrados na sessão.
+* **Resumo Financeiro:** Geração de um relatório automático que agrupa e soma os gastos por categoria, auxiliando na identificação de gargalos no orçamento.
+* **Cálculo de Total:** Exibição imediata da soma de todas as despesas registradas.
 
-| Tecnologia | Uso |
-|------------|-----|
-| Java 17 | Linguagem principal |
-| Maven | Gerenciamento de dependências e build |
-| JUnit 5 | Testes automatizados |
-| Checkstyle | Análise estática / linting |
-| GitHub Actions | Pipeline de CI |
-
----
-
-## Estrutura do Projeto
-
-```
-FluCash/
-├── src/
-│   ├── main/java/com/FluCash/
-│   │   ├── Main.java               # Ponto de entrada
-│   │   ├── MenuCLI.java            # Interface de linha de comando
-│   │   ├── Gerenciador.java        # Lógica de negócio
-│   │   ├── Gasto.java              # Modelo de dados
-│   │   ├── Categoria.java          # Enum de categorias
-│   │   └── ResumoFinanceiro.java   # Relatório por categoria
-│   └── test/java/com/FluCash/
-│       └── GerenciadorTest.java    # Testes automatizados
-├── .github/workflows/ci.yml        # Pipeline CI
-├── checkstyle.xml                  # Regras de lint
-├── pom.xml                         # Dependências Maven
-└── README.md
-```
+### 5. Tecnologias Utilizadas
+* **Java 17:** Linguagem principal (Orientação a Objetos e Stream API).
+* **Maven 3.9+:** Automação de build e gerenciamento de dependências.
+* **JUnit 5:** Criação e execução de testes unitários automatizados.
+* **Checkstyle:** Ferramenta de linting (análise estática) para garantir as regras de formatação do código.
+* **GitHub Actions (CI/CD):** Pipeline de Integração Contínua para validação automática de código a cada novo commit.
 
 ---
 
-## Pré-requisitos
+### 6. Instruções de Instalação
 
-- Java 17 ou superior instalado
-- Maven 3.8 ou superior instalado
+**Pré-requisitos:**
+* Ter o [Java JDK 17](https://aws.amazon.com/pt/corretto/) (ou superior) instalado.
+* Ter o [Apache Maven](https://maven.apache.org/) instalado.
+* Ter o Git instalado.
 
-Verifique com:
+Abra o seu terminal e siga os passos abaixo para clonar e compilar o repositório:
+
 ```bash
-java -version
-mvn -version
-```
-
----
-
-## Instalação e Execução
-
-### 1. Clone o repositório
-```bash
-git clone https://github.com/Daniel-Pinheiro21/FluCash.git
+git clone [https://github.com/Daniel-Pinheiro21/FluCash.git](https://github.com/Daniel-Pinheiro21/FluCash.git)
 cd FluCash
-```
+mvn clean package
+7. Instruções de Execução
+Após compilar o projeto, inicie o FluCash digitando o comando abaixo no terminal:
 
-### 2. Compile o projeto
-```bash
-mvn clean package -DskipTests
-```
-
-### 3. Execute a aplicação
-```bash
+Bash
 java -jar target/flucash-1.0.0-jar-with-dependencies.jar
-```
+Exemplo de Uso (CLI):
 
-### Exemplo de uso
+Plaintext
+╔════════════════════════════════════╗
+║           FLUCASH v1.0.0           ║
+║   Gerenciador de Gastos Pessoais   ║
+╚════════════════════════════════════╝
 
-```
 === Bem-vindo ao FluCash ===
 
 1. Adicionar Gasto
@@ -105,59 +65,45 @@ java -jar target/flucash-1.0.0-jar-with-dependencies.jar
 3. Ver Total Geral
 4. Ver Resumo por Categoria
 5. Sair
-Escolha uma opcao: 1
 
-Descricao do gasto: Almoco
-Valor (ex: 50.50): 35.00
-Categoria (1-ALIMENTACAO, 2-TRANSPORTE, 3-MORADIA, 4-LAZER, 5-SAUDE, 6-OUTROS): 1
-Gasto adicionado com sucesso!
-```
+Escolha uma opção: 1
+Descrição do gasto: Supermercado
+Valor (ex: 50.50): 150.00
+Categoria (1-ALIMENTACAO, 2-TRANSPORTE, 3-MORADIA...): 1
+✔ Gasto adicionado com sucesso!
+8. Instruções para Testes e Linting
+O projeto possui testes automatizados e análise estática para garantir a integridade e qualidade do código.
 
----
+Para rodar os testes automatizados (JUnit 5):
 
-## Rodando os Testes
-
-```bash
+Bash
 mvn test
-```
+Para rodar o Lint / Análise Estática (Checkstyle):
 
-Os testes cobrem:
-- Adição e listagem de gastos (caminho feliz)
-- Rejeição de valores negativos (entrada inválida)
-- Cálculo correto do total com múltiplos gastos (caso limite)
-
----
-
-## Rodando o Lint (Checkstyle)
-
-```bash
+Bash
 mvn checkstyle:check
-```
+9. Estrutura do Projeto
+Plaintext
+FluCash/
+├── src/
+│   ├── main/java/com/FluCash/
+│   │   ├── Categoria.java
+│   │   ├── Gasto.java
+│   │   ├── Gerenciador.java
+│   │   ├── Main.java
+│   │   ├── MenuCLI.java
+│   │   └── ResumoFinanceiro.java
+│   └── test/java/com/FluCash/
+│       └── GerenciadorTest.java
+├── .github/workflows/ci.yml
+├── checkstyle.xml
+├── pom.xml
+└── README.md
+10. Informações do Projeto
+Versão Atual: 1.0.0 (Versionamento Semântico)
 
-O relatório de violações é gerado em `target/checkstyle-result.xml`. A pipeline de CI já executa o lint automaticamente a cada push.
+Autor: Daniel Pinheiro Antunes Nogueira
 
----
+Instituição: Centro Universitário de Brasília (CEUB) - FATECS
 
-## Pipeline de CI (GitHub Actions)
-
-A cada `push` ou `pull request` na branch `main`, o GitHub Actions executa automaticamente:
-
-1. Checkout do código
-2. Configuração do Java 17
-3. Compilação + Lint (Checkstyle) + Testes (`mvn clean verify`)
-
-Veja o workflow em: [`.github/workflows/ci.yml`](.github/workflows/ci.yml)
-
----
-
-## Versão Atual
-
-**v1.0.0** — Versão inicial com funcionalidades core de registro e resumo de gastos.
-
----
-
-## Autor
-
-**Daniel Pinheiro Antunes Nogueira**
-Bootcamp II — UniCEUB
-Repositório: [https://github.com/Daniel-Pinheiro21/FluCash](https://github.com/Daniel-Pinheiro21/FluCash)
+Link do Repositório Público: https://github.com/Daniel-Pinheiro21/FluCash
