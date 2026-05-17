@@ -8,7 +8,7 @@ Download da ultima versao (JAR):
 https://github.com/Daniel-Pinheiro21/FluCash/releases/latest
 
 ```bash
-java -jar flucash-1.0.0.jar
+java -jar flucash-2.0.0.jar
 ```
 
 ---
