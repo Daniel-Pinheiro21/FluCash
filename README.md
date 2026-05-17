@@ -7,12 +7,11 @@
 Download da ultima versao (JAR):
 https://github.com/Daniel-Pinheiro21/FluCash/releases/latest
 
-Execute com:
-
-java -jar flucash-1.0.0-jar-with-dependencies.jar
+```bash
+java -jar flucash-1.0.0.jar
+```
 
 ---
-![FluCash CI](https://github.com/Daniel-Pinheiro21/FluCash/actions/workflows/ci.yml/badge.svg)
 
 Aplicação CLI em Java desenvolvida para o gerenciamento inteligente de finanças pessoais, focada em combater o descontrole financeiro gerado pelos pequenos gastos do dia a dia através de registros rápidos e resumos categorizados.
 
@@ -48,6 +47,7 @@ A escolha por uma interface de terminal (CLI) garante leveza, rapidez e foco tot
 * **Monitoramento e Resumo:** Geração de um relatório automático que agrupa e soma os gastos por categoria
 * **Segurança de Dados:** Validação que impede o cadastro de valores negativos ou nulos
 * **Controle de Total:** Exibição imediata da soma de todas as despesas registradas
+* **Cotação do Dólar:** Exibição da cotação atual USD/BRL ao iniciar o app via API pública
 
 ---
 
@@ -58,6 +58,7 @@ A escolha por uma interface de terminal (CLI) garante leveza, rapidez e foco tot
 * JUnit 5
 * Checkstyle
 * GitHub Actions (CI)
+* AwesomeAPI (cotação de câmbio)
 
 ---
 
@@ -74,7 +75,7 @@ A escolha por uma interface de terminal (CLI) garante leveza, rapidez e foco tot
 git clone https://github.com/Daniel-Pinheiro21/FluCash.git
 cd FluCash
 mvn package -DskipTests
-java -jar target/flucash-1.0.0-jar-with-dependencies.jar
+java -jar target/flucash-1.0.0.jar
 ```
 
 ---
@@ -98,12 +99,9 @@ mvn checkstyle:check
 ### 8. Exemplo de Uso
 
 ```text
-╔════════════════════════════════════╗
-║           FLUCASH v1.0.0           ║
-║   Gerenciador de Gastos Pessoais   ║
-╚════════════════════════════════════╝
-
 === Bem-vindo ao FluCash ===
+Cotacao USD: R$ 5.0518
+============================
 
 1. Adicionar Gasto
 2. Listar Todos os Gastos
@@ -115,24 +113,26 @@ Escolha uma opção: 1
 Descrição do gasto: Supermercado
 Valor (ex: 50.50): 150.00
 Categoria (1-ALIMENTACAO, 2-TRANSPORTE, 3-MORADIA...): 1
-✔ Gasto adicionado com sucesso!
+Gasto adicionado com sucesso!
 ```
 
 ---
 
-### 9. Estrutura do Projeto (v1.0.0)
+### 9. Estrutura do Projeto (v2.0.0)
 
 ```text
 FluCash/
 ├── src/
 │   ├── main/java/com/FluCash/
 │   │   ├── Categoria.java
+│   │   ├── CotacaoService.java
 │   │   ├── Gasto.java
 │   │   ├── Gerenciador.java
 │   │   ├── Main.java
 │   │   ├── MenuCLI.java
 │   │   └── ResumoFinanceiro.java
 │   └── test/java/com/FluCash/
+│       ├── CotacaoServiceIntegrationTest.java
 │       └── GerenciadorTest.java
 ├── .github/workflows/ci.yml
 ├── checkstyle.xml
@@ -144,7 +144,7 @@ FluCash/
 
 ### 10. Informações do Projeto
 
-* **Versão Atual:** 1.0.0 (Versionamento Semântico)
+* **Versão Atual:** 2.0.0 (Versionamento Semântico)
 * **Autor:** Daniel Pinheiro Antunes Nogueira
 * **Instituição:** Centro Universitário de Brasília (CEUB) - FATECS
 * **Link do Repositório Público:** https://github.com/Daniel-Pinheiro21/FluCash
