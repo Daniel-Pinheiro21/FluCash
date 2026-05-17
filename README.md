@@ -1,6 +1,17 @@
 # FluCash
 ---
+![FluCash CI](https://github.com/Daniel-Pinheiro21/FluCash/actions/workflows/ci.yml/badge.svg)
 
+## Deploy / Como executar
+
+Download da ultima versao (JAR):
+https://github.com/Daniel-Pinheiro21/FluCash/releases/latest
+
+Execute com:
+
+java -jar flucash-1.0.0-jar-with-dependencies.jar
+
+---
 ![FluCash CI](https://github.com/Daniel-Pinheiro21/FluCash/actions/workflows/ci.yml/badge.svg)
 
 Aplicação CLI em Java desenvolvida para o gerenciamento inteligente de finanças pessoais, focada em combater o descontrole financeiro gerado pelos pequenos gastos do dia a dia através de registros rápidos e resumos categorizados.

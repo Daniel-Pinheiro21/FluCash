@@ -15,6 +15,10 @@ public class MenuCLI {
         boolean rodando = true;
         System.out.println("=== Bem-vindo ao FluCash ===");
 
+        CotacaoService cotacao = new CotacaoService();
+        System.out.println(cotacao.buscarCotacaoDolar());
+        System.out.println("============================");
+
         while (rodando) {
             exibirOpcoes();
             String opcao = scanner.nextLine();
